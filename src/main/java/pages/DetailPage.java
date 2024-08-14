@@ -16,10 +16,21 @@ public class DetailPage extends BasePage {
 
     private final By availableHead = By.xpath("//th[@class='hprt-table-header-cell -first']");
     private  final By deluxe = By.xpath("//a[@id='room_type_id_78883128']");
+    /*
+    Can you please check this deluxe locator. Its dynamic
+     */
     private final By bedSelect = By.xpath("//input[@type='radio' and @value='1' and @name='bedPreference_78883128']");
     private final By saleAmount = By.xpath("//select[@id='hprt_nos_select_78883128_373531459_2_33_0_131741']");
-    private final By reserveCTA= By.xpath("//span[@class='bui-button__text js-reservation-button__text']");
+    private final By reserveCTA= By.xpath("//div[@class='hprt-reservation-cta']//button[@type='submit']");
+    /*
+    Can you please check this reserve cta locator. Its work for me before but not now
+     */
     private final By confirmDetails = By.xpath("//h2[normalize-space()='Enter your details']");
+
+    /*
+    Some time i got this stale error -
+    org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+     */
 
 
     public void checkDetail(){

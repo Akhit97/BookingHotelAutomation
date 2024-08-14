@@ -9,12 +9,12 @@ public class ConfirmationPage extends BasePage {
     public ConfirmationPage(WebDriver driver) {
         super(driver);
     }
-    private final By confirmDetails = By.xpath("//h2[normalize-space()='Enter your details']");
+    private final By hotelTitle = By.xpath("//h1[normalize-space()='Tolip Hotel Alexandria']");
     private final By priceSummary = By.xpath("(//*[normalize-space()='Your price summary'])[2]");
 
     public void checkConfirmations(){
-        visibilityChecker(confirmDetails);
-        Assert.assertTrue(checkElementDisplay(confirmDetails));
+        visibilityChecker(hotelTitle);
+        Assert.assertTrue(checkElementDisplay(hotelTitle));
         scrollToElement(priceSummary);
         visibilityChecker(priceSummary);
         Assert.assertTrue(checkElementDisplay(priceSummary));

@@ -18,6 +18,8 @@ public class ResultPage extends BasePage {
     private final By reserveCTA =By.xpath("(//span[@class='bui-button__text'][normalize-space()='Reserve'])[1]");
     private final By availableHead = By.xpath("//th[@class='hprt-table-header-cell -first']");
 
+
+
     public void checkResultScreen(){
         visibilityChecker(filter);
         scrollToElement(result);
